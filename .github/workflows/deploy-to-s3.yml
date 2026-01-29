@@ -28,6 +28,45 @@ jobs:
             echo "Bucket already exists"
           fi
 
+      - name: Configure S3 bucket for CloudFront access
+        run: |
+          # Get CloudFront distribution ARN
+          DIST_ARN=$(aws cloudfront get-distribution --id E38F9PVDPMHRQK --query 'Distribution.ARN' --output text)
+          
+          # Create bucket policy that allows CloudFront to read objects
+          cat > /tmp/bucket-policy.json <<EOF
+          {
+            "Version": "2012-10-17",
+            "Statement": [
+              {
+                "Sid": "AllowCloudFrontServicePrincipal",
+                "Effect": "Allow",
+                "Principal": {
+                  "Service": "cloudfront.amazonaws.com"
+                },
+                "Action": "s3:GetObject",
+                "Resource": "arn:aws:s3:::ginnydembek/*",
+                "Condition": {
+                  "StringEquals": {
+                    "AWS:SourceArn": "$DIST_ARN"
+                  }
+                }
+              }
+            ]
+          }
+          EOF
+          
+          # Apply bucket policy
+          aws s3api put-bucket-policy --bucket ginnydembek --policy file:///tmp/bucket-policy.json
+          
+          # Block public access (keep bucket secure, CloudFront will access via OAC/OAI)
+          aws s3api put-public-access-block \
+            --bucket ginnydembek \
+            --public-access-block-configuration \
+            "BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true"
+          
+          echo "Bucket configured for CloudFront access"
+
       - name: Deploy to S3
         run: |
           aws s3 sync . s3://ginnydembek --delete --exclude ".git/*" --exclude ".github/*"
