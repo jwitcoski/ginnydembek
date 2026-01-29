@@ -47,7 +47,8 @@ jobs:
           # Create bucket policy that allows CloudFront to read objects
           cat > /tmp/bucket-policy.json <<EOF
           {
-            "Version": "2012-10-17",
+            "Version": "2008-10-17",
+            "Id": "PolicyForCloudFrontPrivateContent",
             "Statement": [
               {
                 "Sid": "AllowCloudFrontServicePrincipal",
