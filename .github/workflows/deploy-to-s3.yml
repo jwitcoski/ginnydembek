@@ -19,9 +19,18 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1 # Change to your region if different
 
+      - name: Create S3 bucket if it doesn't exist
+        run: |
+          if ! aws s3api head-bucket --bucket ginnydembek 2>/dev/null; then
+            aws s3 mb s3://ginnydembek --region us-east-1
+            echo "Bucket created successfully"
+          else
+            echo "Bucket already exists"
+          fi
+
       - name: Deploy to S3
         run: |
-          aws s3 sync . s3://dembekresume --delete --exclude ".git/*" --exclude ".github/*"
+          aws s3 sync . s3://ginnydembek --delete --exclude ".git/*" --exclude ".github/*"
 
       - name: Invalidate CloudFront cache
         run: |
