@@ -10,14 +10,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js (static export)
+        run: npm run build
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1 # Change to your region if different
+          aws-region: us-east-1
 
       - name: Create S3 bucket if it doesn't exist
         run: |
@@ -30,21 +42,16 @@ jobs:
 
       - name: Configure S3 bucket for CloudFront access
         run: |
-          # Get CloudFront distribution ARN and check origin configuration
           DIST_ARN=$(aws cloudfront get-distribution --id E38F9PVDPMHRQK --query 'Distribution.ARN' --output text)
           echo "CloudFront Distribution ARN: $DIST_ARN"
           
-          # Check if origin has OAC configured
           ORIGIN_ACCESS=$(aws cloudfront get-distribution --id E38F9PVDPMHRQK --query 'Distribution.DistributionConfig.Origins.Items[0].OriginAccessControlId' --output text 2>/dev/null || echo "None")
           if [ "$ORIGIN_ACCESS" = "None" ] || [ -z "$ORIGIN_ACCESS" ]; then
             echo "::warning::CloudFront origin does not have Origin Access Control (OAC) configured!"
-            echo "::warning::Please configure OAC in AWS Console: CloudFront > Distribution > Origins > Edit origin"
-            echo "::warning::Select 'Origin Access Control settings (recommended)' and create/select an OAC"
           else
             echo "Origin Access Control ID: $ORIGIN_ACCESS"
           fi
           
-          # Create bucket policy that allows CloudFront to read objects
           cat > /tmp/bucket-policy.json <<EOF
           {
             "Version": "2008-10-17",
@@ -68,26 +75,19 @@ jobs:
           }
           EOF
           
-          # Apply bucket policy
           aws s3api put-bucket-policy --bucket ginnydembek --policy file:///tmp/bucket-policy.json
-          echo "Bucket policy applied successfully"
           
-          # Block public access (keep bucket secure, CloudFront will access via OAC/OAI)
           aws s3api put-public-access-block \
             --bucket ginnydembek \
             --public-access-block-configuration \
             "BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true"
           
           echo "Bucket configured for CloudFront access"
-          
-          # Verify bucket policy
-          echo "Current bucket policy:"
-          aws s3api get-bucket-policy --bucket ginnydembek --query Policy --output text | jq . 2>/dev/null || aws s3api get-bucket-policy --bucket ginnydembek --query Policy --output text
 
       - name: Deploy to S3
         run: |
-          aws s3 sync . s3://ginnydembek --delete --exclude ".git/*" --exclude ".github/*"
+          aws s3 sync out/ s3://ginnydembek --delete
 
       - name: Invalidate CloudFront cache
         run: |
-          aws cloudfront create-invalidation --distribution-id E38F9PVDPMHRQK --paths "/*" 
+          aws cloudfront create-invalidation --distribution-id E38F9PVDPMHRQK --paths "/*"
