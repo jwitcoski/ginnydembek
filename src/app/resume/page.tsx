@@ -10,7 +10,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Academic Resume | Ginny Dembek Ph.D.",
   description:
-    "Academic resume for Ginny Dembek Ph.D. — special education faculty at Brooklyn College. Research, teaching, publications, presentations, and consulting.",
+    "Academic resume for Ginny Dembek Ph.D., special education faculty at Brooklyn College. Research, teaching, publications, presentations, and consulting.",
 };
 
 const ResumePage = () => {
@@ -52,7 +52,7 @@ const ResumePage = () => {
             </p>
           </div>
           <Link href="/#contact" className="btn-primary shrink-0">
-            Schedule a Consultation
+            Request a Consultation
           </Link>
         </div>
       </section>

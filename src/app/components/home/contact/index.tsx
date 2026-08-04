@@ -31,7 +31,7 @@ const Contact = () => {
         email: formData.email,
         childInfo: formData.childInfo,
         message: formData.message,
-        _subject: "Consultation inquiry — Ginny Dembek Ph.D.",
+        _subject: "Consultation inquiry: Ginny Dembek Ph.D.",
       }),
     })
       .then((response) => response.json())
@@ -59,9 +59,9 @@ const Contact = () => {
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <h2 className="text-ink mb-4">Start the conversation</h2>
+            <h2 className="text-ink mb-4">Contact</h2>
             <p className="mb-8">
-              Tell Ginny a bit about your child and what you are looking for. She will follow up to discuss fit, next steps, and how she can help.
+              Share a brief description of your child and what kind of support you are seeking. Dr. Dembek will follow up to discuss next steps.
             </p>
             <div className="flex flex-col gap-3">
               {contactLinks.contactInfo.map((item) => (
@@ -144,7 +144,7 @@ const Contact = () => {
             </div>
             <div>
               <label htmlFor="message" className="label">
-                How can Ginny help your child? *
+                What support are you looking for? *
               </label>
               <textarea
                 required
@@ -165,12 +165,12 @@ const Contact = () => {
                   height={24}
                 />
                 <p className="text-primary m-0 text-base">
-                  Thank you. Your message has been sent. Ginny will be in touch shortly.
+                  Thank you. Your message has been sent.
                 </p>
               </div>
             )}
             <button type="submit" className="btn-primary w-fit cursor-pointer border-0">
-              Request a Consultation
+              Send Message
             </button>
           </form>
         </div>

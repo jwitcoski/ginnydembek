@@ -1,18 +1,20 @@
-import WhyHire from "./components/home/why-hire";
+import WhoItsFor from "./components/home/who-its-for";
+import HowItWorks from "./components/home/how-it-works";
+import WhatChanges from "./components/home/what-changes";
+import Logistics from "./components/home/logistics";
+import Trust from "./components/home/trust";
 import Contact from "./components/home/contact";
-import Credentials from "./components/home/credentials";
-import About from "./components/home/about";
 import HeroSection from "./components/home/hero-section";
-import Services from "./components/home/services";
 
 const page = () => {
   return (
     <main>
       <HeroSection />
-      <WhyHire />
-      <Services />
-      <Credentials />
-      <About />
+      <WhoItsFor />
+      <HowItWorks />
+      <WhatChanges />
+      <Logistics />
+      <Trust />
       <Contact />
     </main>
   );

@@ -6,16 +6,15 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const homeLinks = [
-  { href: "/#why-hire", label: "Why Hire Ginny" },
-  { href: "/#services", label: "Services" },
-  { href: "/#credentials", label: "Credentials" },
-  { href: "/#about", label: "About" },
+  { href: "/#who", label: "Who It's For" },
+  { href: "/#how", label: "How It Works" },
+  { href: "/#results", label: "Focus" },
+  { href: "/#logistics", label: "Details" },
   { href: "/#contact", label: "Contact" },
-  { href: "/resume", label: "Academic Resume" },
 ];
 
 const resumeLinks = [
-  { href: "/", label: "Consulting Home" },
+  { href: "/", label: "Home" },
   { href: "/resume#about", label: "About" },
   { href: "/resume#research", label: "Research" },
   { href: "/resume#publications", label: "Publications" },
@@ -45,7 +44,7 @@ const Header = () => {
               </Link>
             ))}
             <Link href="/#contact" className="btn-primary text-sm md:text-base px-5 py-2.5">
-              Schedule a Consultation
+              Request a Consultation
             </Link>
           </div>
           <button
@@ -77,7 +76,7 @@ const Header = () => {
               onClick={() => setOpen(false)}
               className="btn-primary w-fit text-sm mt-2"
             >
-              Schedule a Consultation
+              Request a Consultation
             </Link>
           </div>
         )}

@@ -1,21 +1,30 @@
-# Project Specs — Ginny Dembek Ph.D. Consulting Site
+# Project Specs: Ginny Dembek Ph.D. Consulting Site
 
 ## Goal
-Upgrade the academic resume template into a professional education consulting website for parents seeking specialized support for their child.
+Parent-facing education consulting homepage, with the full academic resume on `/resume`.
 
-## Positioning
-- Audience: parents and families of children with learning differences, literacy challenges, or special education needs
-- Offer: evidence-based literacy tutoring, academic support, executive function coaching, and education consulting
-- Trust: Ph.D. in Special Education, Brooklyn College faculty, third-generation special educator, peer-reviewed intervention research
+## Homepage flow
+1. Hero
+2. Who it's for
+3. How it works
+4. What the work focuses on for your child
+5. Practical details
+6. Brief about / trust + link to resume
+7. Contact
+
+## Rules
+- Do not invent ages, pricing, session format, outcomes, or testimonials
+- Use "Dr. Dembek" or full name "Ginny Dembek Ph.D." (not first name alone)
+- Keep academic CV off the homepage except a short about blurb and resume link
 
 ## Completed
-- [x] Reposition from academic CV to parent-facing consulting practice
-- [x] Remove resume-template / AI-portfolio aesthetics and fluff copy
-- [x] Hero focused on brand + why hire her for your child + CTA
-- [x] Why Hire Her, Services, Credentials, About, Contact sections
-- [x] Streamlined navigation and business metadata
-- [x] Keep full academic resume at `/resume` (research, pubs, courses, programs, consulting, tutoring)
+- [x] Parent-facing consulting homepage
+- [x] Academic resume at `/resume`
+- [x] Homepage reworked around who / how / focus / logistics / contact
+- [x] Academic resume demoted to footer + about link
+- [x] Em dash / informal copy cleanup
 
 ## Pending
-- [ ] Formspree / production contact endpoint confirmation (form currently posts via formsubmit)
-- [ ] Optional testimonials when client-approved quotes are available
+- [ ] Confirm contact form endpoint for production
+- [ ] Add testimonials only when client-approved quotes exist
+- [ ] Add logistics details (format, ages, fees) when provided by Dr. Dembek

@@ -25,7 +25,7 @@ const AboutMe = () => {
                             <div className="w-[303px] h-[440px] hidden lg:flex">
                                 <Image
                                     src="/images/about-photo.png"
-                                    alt="Ginny Dembek"
+                                    alt="Ginny Dembek Ph.D."
                                     width={303}
                                     height={440}
                                     className="w-full h-full object-cover rounded-lg"
@@ -40,7 +40,7 @@ const AboutMe = () => {
                                     for their students.
                                 </p>
                                 <p className="mb-4">
-                                    <strong>Research Focus:</strong> My research agenda centers on intervention research—helping teachers
+                                    <strong>Research Focus:</strong> My research agenda centers on intervention research, helping teachers
                                     apply work in the field with high validity. I focus on problem solving in literacy, literacy instruction
                                     and tutoring, writing instruction, and enhancing teacher preparation with Universal Design for Learning.
                                 </p>

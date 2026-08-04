@@ -7,21 +7,21 @@ const Footer = () => {
         <div>
           <p className="font-display text-xl text-white mb-1">Ginny Dembek Ph.D.</p>
           <p className="text-sm text-white/60 m-0">
-            Education consulting &amp; literacy support for children and families
+            Literacy tutoring and education support for students with learning differences
           </p>
         </div>
         <div className="flex flex-wrap gap-5 text-sm">
-          <Link href="/#services" className="hover:text-white">
-            Services
+          <Link href="/#who" className="hover:text-white">
+            Who It&apos;s For
           </Link>
-          <Link href="/#credentials" className="hover:text-white">
-            Credentials
-          </Link>
-          <Link href="/resume" className="hover:text-white">
-            Academic Resume
+          <Link href="/#how" className="hover:text-white">
+            How It Works
           </Link>
           <Link href="/#contact" className="hover:text-white">
             Contact
+          </Link>
+          <Link href="/resume" className="hover:text-white">
+            Academic Resume
           </Link>
           <Link href="mailto:dembek@brooklyn.edu" className="hover:text-white">
             dembek@brooklyn.edu

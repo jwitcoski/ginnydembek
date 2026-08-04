@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <Image
           src="/images/headshot1.jpeg"
-          alt="Ginny Dembek Ph.D., education consultant"
+          alt="Ginny Dembek Ph.D."
           fill
           priority
           className="object-cover object-[center_20%] hero-image-motion"
@@ -23,17 +23,17 @@ const HeroSection = () => {
             Ginny Dembek Ph.D.
           </p>
           <h1 className="animate-fade-up-delay text-white mb-5 md:mb-6">
-            Specialized support so your child can thrive in school
+            Literacy tutoring and education support for students with learning differences
           </h1>
           <p className="animate-fade-up-delay-2 text-white/85 text-lg md:text-xl max-w-xl mb-8 md:mb-10">
-            Evidence-based literacy tutoring and education consulting from a special education professor—built around your child&apos;s strengths, challenges, and goals.
+            Special education faculty at Brooklyn College. Consulting and tutoring based on assessment, evidence-based instruction, and progress monitoring.
           </p>
           <div className="animate-fade-up-delay-2 flex flex-wrap gap-3 md:gap-4">
             <Link href="/#contact" className="btn-primary">
-              Schedule a Consultation
+              Request a Consultation
             </Link>
-            <Link href="/#why-hire" className="btn-secondary">
-              Why Parents Hire Ginny
+            <Link href="/#who" className="btn-secondary">
+              See who this is for
             </Link>
           </div>
         </div>

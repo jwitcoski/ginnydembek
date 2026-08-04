@@ -22,87 +22,79 @@ export const contactBar = {
   ],
 };
 
-export const whyHireReasons = [
+export const whoItsFor = [
   {
-    title: "A specialist for your child’s learning needs",
+    title: "Reading and writing difficulties",
     description:
-      "Ginny works one-on-one with students who struggle with reading, writing, or learning differences—using methods proven in research and refined in real classrooms.",
+      "Support for students with dyslexia, dysgraphia, or language-based learning disabilities who need structured literacy instruction.",
   },
   {
-    title: "Third-generation special educator",
+    title: "Learning disabilities at school",
     description:
-      "Advocacy and high expectations for students with disabilities are part of her family’s practice across three generations. Your child is met with skill, patience, and belief in what they can achieve.",
+      "Academic support for students with learning disabilities, including strategies for schoolwork, accommodations, and self-advocacy.",
   },
   {
-    title: "Ph.D.-level expertise, applied personally",
+    title: "Organization and executive function",
     description:
-      "As faculty at Brooklyn College’s School of Education, she trains teachers in evidence-based literacy and special education—then brings that same rigor to the work she does with individual students and families.",
+      "Coaching in time management, organization, planning, task initiation, and self-monitoring.",
   },
   {
-    title: "Progress you can see",
+    title: "College transition",
     description:
-      "Instruction is assessment-driven, with clear goals and ongoing progress monitoring so you know what is working and how your child is moving forward.",
-  },
-];
-
-export const services = [
-  {
-    title: "Specialized Literacy Tutoring",
-    description:
-      "Structured, evidence-based support for dyslexia, dysgraphia, and language-based learning disabilities—building reading and writing skills with clarity and consistency.",
-  },
-  {
-    title: "Academic Support for Learning Disabilities",
-    description:
-      "Explicit instruction and practical strategies so your child can keep up with schoolwork, use accommodations effectively, and grow more confident as a learner.",
-  },
-  {
-    title: "Executive Function Coaching",
-    description:
-      "Help with organization, planning, time management, and task initiation—skills that unlock success across every subject.",
-  },
-  {
-    title: "College Preparation for Students with Disabilities",
-    description:
-      "Guidance on self-advocacy, accommodations, and the transition to postsecondary learning so your child is ready for the next step.",
+      "Preparation for students with disabilities moving toward college, including accommodations guidance and self-advocacy.",
   },
 ];
 
-export const credentials = {
-  education: [
-    {
-      title: "Ph.D. in Special Education",
-      detail: "Penn State University — intervention research in literacy and problem solving for students with disabilities",
-    },
-    {
-      title: "Faculty, Brooklyn College School of Education",
-      detail: "Since 2013 — preparing teachers in inclusive education, literacy instruction, and special education practice",
-    },
-  ],
-  highlights: [
-    { value: "10+", label: "Years at Brooklyn College" },
-    { value: "6+", label: "Peer-reviewed publications" },
-    { value: "30+", label: "Conference presentations" },
-  ],
-  expertise: [
-    "Special Education",
-    "Literacy Instruction",
-    "Writing Intervention",
-    "Inclusive Education",
-    "Universal Design for Learning",
-    "Program Evaluation",
-  ],
-};
+export const howItWorks = [
+  {
+    title: "Assessment-based planning",
+    description:
+      "Work begins with assessment that informs individualized goals for your child.",
+  },
+  {
+    title: "Evidence-based instruction",
+    description:
+      "Instruction uses research-supported methods from special education and literacy intervention.",
+  },
+  {
+    title: "Progress monitoring",
+    description:
+      "Progress is tracked against learning goals so you can see what is working.",
+  },
+  {
+    title: "Collaboration with schools and families",
+    description:
+      "The approach includes working with families and schools so support stays consistent across settings.",
+  },
+];
+
+export const whatChanges = [
+  {
+    title: "Clear goals for your child",
+    description:
+      "Instruction is tied to specific learning goals, not generic homework help.",
+  },
+  {
+    title: "Skills that transfer to school",
+    description:
+      "The focus includes reading, writing, academic strategies, and the executive skills students need for classroom work.",
+  },
+  {
+    title: "A path toward independence",
+    description:
+      "Instruction emphasizes metacognitive strategies and gradual release of responsibility so your child can do more on their own.",
+  },
+];
 
 export const educationData = {
   education: [
     {
-      title: "Ph.D. in Special Education - Penn State University",
+      title: "Ph.D. in Special Education, Penn State University",
       description:
         "Research in problem solving, literacy instruction, and evidence-based interventions for students with disabilities.",
     },
     {
-      title: "Brooklyn College, School of Education - Faculty since 2013",
+      title: "Brooklyn College, School of Education. Faculty since 2013",
       description:
         "Assistant Professor teaching courses in special education, inclusive education, literacy instruction, and research methods.",
     },

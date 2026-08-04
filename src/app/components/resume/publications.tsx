@@ -101,7 +101,7 @@ const PresentationsContent = () => (
         <li>Dembek, G.A. (2013, April). The effect of talk aloud instruction on problem solving skills. Science Education for Students with Disabilities (SESD) Annual Conference, San Antonio, TX.</li>
         <li>Spring 2013 Guest Lecturer: Co-teaching panel presentation (SPLED 404). Penn State University.</li>
         <li>Spring 2013 Guest Lecturer: Behavioral Fluency for Reading (SPLED 409A). Penn State University.</li>
-        <li>Fall 2012 – Fall 2009: Multiple guest lectures at Penn State University (SPLED 411, SPLED 395W).</li>
+        <li>Fall 2012 to Fall 2009: Multiple guest lectures at Penn State University (SPLED 411, SPLED 395W).</li>
       </ul>
     </div>
     <div>
@@ -134,18 +134,18 @@ const CoursesContent = () => (
     <div>
       <h4 className="font-bold mb-3">Graduate Courses Taught at Brooklyn College</h4>
       <ul className="space-y-4">
-        <li><strong>CBSE 7677:</strong> Curriculum Modifications for Teaching Students with Special Needs (Instructor and Course Convenor) — Adapting general education curriculum for inclusive classrooms.</li>
-        <li><strong>CBSE 7680:</strong> Research Methods in Special Education — Qualitative and quantitative research methodologies.</li>
-        <li><strong>CBSE 7657T:</strong> Seminar in Applied Theory and Research — Independent research project in special education.</li>
-        <li><strong>CBSE 7678:</strong> Literacy Instruction for Students with Special Needs (Instructor and Course Convener) — Evidence-based literacy instruction.</li>
-        <li><strong>CBSE 7681:</strong> Special Education Student Teaching Seminar — Support during student teaching experiences.</li>
+        <li><strong>CBSE 7677:</strong> Curriculum Modifications for Teaching Students with Special Needs (Instructor and Course Convenor). Adapting general education curriculum for inclusive classrooms.</li>
+        <li><strong>CBSE 7680:</strong> Research Methods in Special Education: Qualitative and quantitative research methodologies.</li>
+        <li><strong>CBSE 7657T:</strong> Seminar in Applied Theory and Research: Independent research project in special education.</li>
+        <li><strong>CBSE 7678:</strong> Literacy Instruction for Students with Special Needs (Instructor and Course Convener). Evidence-based literacy instruction.</li>
+        <li><strong>CBSE 7681:</strong> Special Education Student Teaching Seminar: Support during student teaching experiences.</li>
       </ul>
     </div>
     <div>
       <h4 className="font-bold mb-3">Undergraduate Courses Taught at Brooklyn College</h4>
       <ul className="space-y-4">
-        <li><strong>CBSE 3456/7674:</strong> Inclusive Education and Teaching Students with Special Needs — Foundational knowledge about inclusive education.</li>
-        <li><strong>SPCL 3200:</strong> Assistive Technology for Students with Disabilities (Instructor and Course Convener) — AAC, AT, and Universal Design for Learning.</li>
+        <li><strong>CBSE 3456/7674:</strong> Inclusive Education and Teaching Students with Special Needs: Foundational knowledge about inclusive education.</li>
+        <li><strong>SPCL 3200:</strong> Assistive Technology for Students with Disabilities (Instructor and Course Convener). AAC, AT, and Universal Design for Learning.</li>
       </ul>
     </div>
     <div>
@@ -165,7 +165,7 @@ const ProgramsContent = () => (
     <div>
       <h4 className="font-bold mb-3">Special Education Undergraduate Program (2022-Present)</h4>
       <p>Led the development of a new 30 credit program for undergraduate teachers to gain certification in special education. The program focuses on evidence-based practices, inclusive education, and technology integration for students with disabilities.</p>
-      <Link href="https://www.brooklyn.edu/academics/programs/childhood-education-teacher-special-education-bs/" target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-primary hover:underline font-medium">View Program Details →</Link>
+      <Link href="https://www.brooklyn.edu/academics/programs/childhood-education-teacher-special-education-bs/" target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-primary hover:underline font-medium">View Program Details</Link>
     </div>
     <div>
       <h4 className="font-bold mb-3">Literacy Tutoring Program for Foster Youth (2019-2024)</h4>
@@ -193,10 +193,10 @@ const ConsultingContent = () => (
     <div>
       <h4 className="font-bold mb-3">Areas of Expertise</h4>
       <div className="grid md:grid-cols-2 gap-4">
-        <div><strong>Educational Program Evaluation</strong> — Comprehensive evaluation services for special education interventions.</div>
-        <div><strong>Inclusive Education Implementation</strong> — Developing inclusive education models and co-teaching support.</div>
-        <div><strong>Curriculum Development and Modification</strong> — Accessibility reviews and UDL integration.</div>
-        <div><strong>Professional Development Design</strong> — Customized workshops and multi-year learning initiatives.</div>
+        <div><strong>Educational Program Evaluation</strong>: Comprehensive evaluation services for special education interventions.</div>
+        <div><strong>Inclusive Education Implementation</strong>: Developing inclusive education models and co-teaching support.</div>
+        <div><strong>Curriculum Development and Modification</strong>: Accessibility reviews and UDL integration.</div>
+        <div><strong>Professional Development Design</strong>: Customized workshops and multi-year learning initiatives.</div>
       </div>
     </div>
     <div>
@@ -215,20 +215,20 @@ const TutoringContent = () => (
     <div>
       <h4 className="font-bold mb-3">Specialized Services</h4>
       <div className="grid md:grid-cols-2 gap-4">
-        <div><strong>Specialized Literacy Tutoring</strong> — Dyslexia, dysgraphia, language-based learning disabilities; evidence-based structured literacy.</div>
-        <div><strong>Academic Support for Learning Disabilities</strong> — Explicit instruction, compensatory strategies, study techniques, self-advocacy.</div>
-        <div><strong>Executive Function Coaching</strong> — Time management, organization, planning, task initiation, self-monitoring.</div>
-        <div><strong>College Preparation for Students with Disabilities</strong> — Self-advocacy training, accommodations guidance, college applications.</div>
+        <div><strong>Specialized Literacy Tutoring</strong>: Dyslexia, dysgraphia, language-based learning disabilities; evidence-based structured literacy.</div>
+        <div><strong>Academic Support for Learning Disabilities</strong>: Explicit instruction, compensatory strategies, study techniques, self-advocacy.</div>
+        <div><strong>Executive Function Coaching</strong>: Time management, organization, planning, task initiation, self-monitoring.</div>
+        <div><strong>College Preparation for Students with Disabilities</strong>: Self-advocacy training, accommodations guidance, college applications.</div>
       </div>
     </div>
     <div>
       <h4 className="font-bold mb-3">Tutoring Approach</h4>
       <ul className="list-disc pl-6 space-y-2">
-        <li><strong>Assessment-Based Planning</strong> — Comprehensive assessment informing individualized goals</li>
-        <li><strong>Evidence-Based Methods</strong> — Research-supported instructional approaches</li>
-        <li><strong>Progress Monitoring</strong> — Regular data collection aligned with learning goals</li>
-        <li><strong>Collaboration with Schools and Families</strong> — Consistency across learning environments</li>
-        <li><strong>Focus on Independence</strong> — Metacognitive strategies and gradual release of responsibility</li>
+        <li><strong>Assessment-Based Planning</strong>: Comprehensive assessment informing individualized goals</li>
+        <li><strong>Evidence-Based Methods</strong>: Research-supported instructional approaches</li>
+        <li><strong>Progress Monitoring</strong>: Regular data collection aligned with learning goals</li>
+        <li><strong>Collaboration with Schools and Families</strong>: Consistency across learning environments</li>
+        <li><strong>Focus on Independence</strong>: Metacognitive strategies and gradual release of responsibility</li>
       </ul>
     </div>
   </div>

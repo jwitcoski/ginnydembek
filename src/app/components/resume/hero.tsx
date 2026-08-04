@@ -13,14 +13,14 @@ const ResumeHero = () => {
             <div>
               <h1 className="text-ink mb-2">Ginny Dembek Ph.D.</h1>
               <p className="font-display text-xl md:text-2xl text-ink/80 m-0">
-                Researcher · Educator · Consultant · Advocate
+                Researcher, Educator, Consultant, Advocate
               </p>
             </div>
             <p className="text-secondary font-normal max-w-md xl:max-w-xl m-0">
               As a third-generation special educator, I am committed to improving the lives of students with disabilities and increasing their success and inclusion in the general education classroom.
             </p>
             <Link href="/" className="btn-outline w-fit text-sm md:text-base">
-              ← Back to Consulting Site
+              Back to Consulting Site
             </Link>
           </div>
           <Image
