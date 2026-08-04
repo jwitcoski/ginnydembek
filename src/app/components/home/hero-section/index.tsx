@@ -1,25 +1,45 @@
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 
-const index = () => {
-    return (
-        <section className="relative hero-section overflow-hidden pt-35 md:pt-40 pb-12 lg:pb-30 xl:pt-52">
-            <div className="container">
-                <div className="lg:flex grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-4 items-center">
-                    <div className="flex flex-col gap-4 md:gap-7 max-w-2xl">
-                        <div>
-                            <h1>I&apos;m Ginny Dembek</h1>
-                            <h1>Researcher / Educator / Consultant / Advocate</h1>
-                        </div>
-                        <p className="text-secondary font-normal max-w-md xl:max-w-xl">As a third generation Special Educator, I am committed to improving the lives of students with disabilities and increasing their success and inclusion in the general education classroom.</p>
-                    </div>
-                    <Image src={"/images/headshot1.jpeg"} alt="Ginny Dembek" width={685} height={650} className="block lg:hidden object-cover rounded-lg" />
-                </div>
-            </div>
-            <div className="absolute right-0 top-0 hidden h-auto w-1/2 lg:block 2xl:h-171.5 2xl:w-187.5">
-                <Image src={"/images/headshot1.jpeg"} alt="Ginny Dembek" width={685} height={650} className="absolute right-0 top-0 z-1 object-cover rounded-lg" />
-            </div>
-        </section>
-    )
-}
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-[100svh] flex items-end overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/headshot1.jpeg"
+          alt="Ginny Dembek Ph.D., education consultant"
+          fill
+          priority
+          className="object-cover object-[center_20%] hero-image-motion"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/40 to-transparent" />
+      </div>
 
-export default index
+      <div className="relative z-10 container pb-16 md:pb-24 pt-36 md:pt-44 w-full">
+        <div className="max-w-2xl">
+          <p className="animate-fade-up font-display text-2xl md:text-3xl lg:text-4xl text-white mb-4 md:mb-5">
+            Ginny Dembek Ph.D.
+          </p>
+          <h1 className="animate-fade-up-delay text-white mb-5 md:mb-6">
+            Specialized support so your child can thrive in school
+          </h1>
+          <p className="animate-fade-up-delay-2 text-white/85 text-lg md:text-xl max-w-xl mb-8 md:mb-10">
+            Evidence-based literacy tutoring and education consulting from a special education professor—built around your child&apos;s strengths, challenges, and goals.
+          </p>
+          <div className="animate-fade-up-delay-2 flex flex-wrap gap-3 md:gap-4">
+            <Link href="#contact" className="btn-primary">
+              Schedule a Consultation
+            </Link>
+            <Link href="#why-hire" className="btn-secondary">
+              Why Parents Hire Ginny
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
