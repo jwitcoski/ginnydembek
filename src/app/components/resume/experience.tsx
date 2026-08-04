@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExperienceSec = () => {
+const Experience = () => {
     return (
         <section id="research">
             <div className="py-16 md:py-32">
@@ -59,4 +59,4 @@ const ExperienceSec = () => {
     );
 };
 
-export default ExperienceSec;
+export default Experience;

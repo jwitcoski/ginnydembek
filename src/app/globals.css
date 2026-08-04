@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
-
 html {
   scroll-behavior: smooth;
 }
@@ -9,54 +7,23 @@ html {
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-body), system-ui, sans-serif;
 }
-
-button::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background-color: #FE4300; 
-  transition: height 0.3s ease;
-  z-index: 0;
-}
-
-button:hover::before {
-  height: 100%;
-}
-
-.wave {
-  animation-name: wave-animation;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) } 
-  100% { transform: rotate( 0.0deg) }
-}
-
-
-
-
 
 @theme {
-  --color-primary: #FE4300;
-  --color-secondary: #868686;
-  --color-softGray: #F0F0F0;
-  --color-mistGray: #D7DCDD;
-  --color-gray: #C0D8E0;
+  --color-primary: #1a5c57;
+  --color-primary-dark: #134743;
+  --color-ink: #142033;
+  --color-secondary: #5a6578;
+  --color-canvas: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-softGray: #e8ecf0;
+  --color-mistGray: #d5dbe3;
+  --color-accent-warm: #c45c26;
+  --color-hero-veil: rgba(14, 28, 48, 0.55);
 
   --breakpoint-xs: 425px;
 }
@@ -65,76 +32,123 @@ button:hover::before {
   .container {
     @apply w-full max-w-[80rem] mx-auto mt-0 mb-0 py-0 sm:px-7 px-5;
   }
+
   .label {
-    @apply text-secondary text-sm font-normal;
+    @apply text-secondary text-sm font-normal tracking-wide;
   }
+
   .input {
-    @apply w-full border-b border-gray focus:border-primary focus:outline-none py-2;
+    @apply w-full border-b border-mistGray focus:border-primary focus:outline-none py-2 bg-transparent text-ink;
+  }
+
+  .section-pad {
+    @apply py-16 md:py-24 xl:py-28;
+  }
+
+  .font-display {
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  }
+
+  .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
   }
 }
 
 @layer base {
   h1 {
-    @apply text-4xl md:text-5xl xl:text-7xl 2xl:text-[85px] font-semibold leading-tight;
+    @apply text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-semibold leading-[1.1] tracking-tight;
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
   }
 
   h2 {
-    @apply text-3xl md:text-5xl lg:text-6xl xl:text-[65px] font-semibold;
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight;
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold;
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
   }
 
   h4 {
-    @apply text-4xl;
+    @apply text-lg md:text-xl font-semibold;
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
   }
 
   h5 {
-    @apply text-xl xl:text-2xl;
+    @apply text-lg xl:text-xl font-semibold;
   }
 
   h6 {
-    @apply text-sm md:text-base xl:text-xl;
+    @apply text-sm md:text-base xl:text-lg;
   }
 
   p {
-    @apply text-base text-secondary;
+    @apply text-base md:text-lg text-secondary leading-relaxed;
+  }
+
+  a {
+    @apply transition-colors duration-200;
   }
 }
 
-@media print {
-  body {
-    background: white !important;
-    color: black !important;
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  header, footer, .navbar, .no-print {
-    display: none !important;
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
 
-  main {
-    padding: 0;
-    margin: 0;
-    width: 100%;
+@keyframes slow-zoom {
+  from {
+    transform: scale(1);
   }
+  to {
+    transform: scale(1.06);
+  }
+}
 
-  * {
-    box-shadow: none !important;
-    background: transparent !important;
-  }
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
 
-  html, body {
-    height: auto;
-    overflow: visible;
-  }
+.animate-fade-up-delay {
+  animation: fade-up 0.8s ease-out 0.15s both;
+}
 
-  .hero-section{
-    padding-top: 35px;
-  }
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.8s ease-out 0.3s both;
+}
 
-  .break-page {
-    break-before: page;
-    page-break-before: always;
-  }
+.animate-fade-in {
+  animation: fade-in 1s ease-out both;
+}
+
+.hero-image-motion {
+  animation: slow-zoom 18s ease-out forwards;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-3.5 rounded-sm bg-primary text-white font-medium text-base md:text-lg hover:bg-primary-dark transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-3.5 rounded-sm border border-white/80 text-white font-medium text-base md:text-lg hover:bg-white hover:text-ink transition-colors duration-200;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-3.5 rounded-sm border border-ink text-ink font-medium text-base md:text-lg hover:bg-ink hover:text-white transition-colors duration-200;
 }

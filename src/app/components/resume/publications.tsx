@@ -13,7 +13,7 @@ const sections = [
   { id: "news", title: "News & Current Events" },
 ];
 
-const LatestWork = () => {
+const Publications = () => {
   const [openSection, setOpenSection] = useState<string | null>("publications");
 
   useEffect(() => {
@@ -240,4 +240,4 @@ const NewsContent = () => (
   </div>
 );
 
-export default LatestWork;
+export default Publications;
