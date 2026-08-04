@@ -29,10 +29,10 @@ const HeroSection = () => {
             Evidence-based literacy tutoring and education consulting from a special education professor—built around your child&apos;s strengths, challenges, and goals.
           </p>
           <div className="animate-fade-up-delay-2 flex flex-wrap gap-3 md:gap-4">
-            <Link href="#contact" className="btn-primary">
+            <Link href="/#contact" className="btn-primary">
               Schedule a Consultation
             </Link>
-            <Link href="#why-hire" className="btn-secondary">
+            <Link href="/#why-hire" className="btn-secondary">
               Why Parents Hire Ginny
             </Link>
           </div>

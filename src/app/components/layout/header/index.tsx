@@ -2,25 +2,39 @@
 
 import Logo from "../logo";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const navLinks = [
-  { href: "#why-hire", label: "Why Hire Ginny" },
-  { href: "#services", label: "Services" },
-  { href: "#credentials", label: "Credentials" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+const homeLinks = [
+  { href: "/#why-hire", label: "Why Hire Ginny" },
+  { href: "/#services", label: "Services" },
+  { href: "/#credentials", label: "Credentials" },
+  { href: "/#about", label: "About" },
+  { href: "/#contact", label: "Contact" },
+  { href: "/resume", label: "Academic Resume" },
+];
+
+const resumeLinks = [
+  { href: "/", label: "Consulting Home" },
+  { href: "/resume#about", label: "About" },
+  { href: "/resume#research", label: "Research" },
+  { href: "/resume#publications", label: "Publications" },
+  { href: "/resume#consulting", label: "Consulting" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isResume = pathname?.startsWith("/resume");
+  const navLinks = isResume ? resumeLinks : homeLinks;
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-ink/90 backdrop-blur-md border-b border-white/10">
       <div className="container">
         <nav className="py-4 md:py-5 flex items-center justify-between gap-4">
           <Logo />
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -30,7 +44,7 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Link href="#contact" className="btn-primary text-sm md:text-base px-5 py-2.5">
+            <Link href="/#contact" className="btn-primary text-sm md:text-base px-5 py-2.5">
               Schedule a Consultation
             </Link>
           </div>
@@ -39,7 +53,7 @@ const Header = () => {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden relative z-10 flex flex-col justify-center gap-1.5 w-10 h-10 border border-white/30 rounded-sm"
+            className="lg:hidden relative z-10 flex flex-col justify-center gap-1.5 w-10 h-10 border border-white/30 rounded-sm bg-transparent"
           >
             <span className={`block mx-auto w-5 h-0.5 bg-white transition-transform ${open ? "translate-y-2 rotate-45" : ""}`} />
             <span className={`block mx-auto w-5 h-0.5 bg-white transition-opacity ${open ? "opacity-0" : ""}`} />
@@ -59,7 +73,7 @@ const Header = () => {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="btn-primary w-fit text-sm mt-2"
             >

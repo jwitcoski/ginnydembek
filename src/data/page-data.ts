@@ -94,6 +94,34 @@ export const credentials = {
   ],
 };
 
+export const educationData = {
+  education: [
+    {
+      title: "Ph.D. in Special Education - Penn State University",
+      description:
+        "Research in problem solving, literacy instruction, and evidence-based interventions for students with disabilities.",
+    },
+    {
+      title: "Brooklyn College, School of Education - Faculty since 2013",
+      description:
+        "Assistant Professor teaching courses in special education, inclusive education, literacy instruction, and research methods.",
+    },
+    {
+      title: "Research Focus Areas",
+      description:
+        "Intervention research, literacy tutoring for foster youth, writing instruction, Universal Design for Learning in teacher preparation.",
+    },
+  ],
+  skills: [
+    { name: "Special Education" },
+    { name: "Literacy Instruction" },
+    { name: "Program Evaluation" },
+    { name: "Curriculum Development" },
+    { name: "Professional Development" },
+    { name: "Inclusive Education" },
+  ],
+};
+
 export const contactLinks = {
   socialLinks: [
     { title: "LinkedIn", href: "https://linkedin.com/in/ginnydembek" },

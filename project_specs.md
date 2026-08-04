@@ -14,6 +14,7 @@ Upgrade the academic resume template into a professional education consulting we
 - [x] Hero focused on brand + why hire her for your child + CTA
 - [x] Why Hire Her, Services, Credentials, About, Contact sections
 - [x] Streamlined navigation and business metadata
+- [x] Keep full academic resume at `/resume` (research, pubs, courses, programs, consulting, tutoring)
 
 ## Pending
 - [ ] Formspree / production contact endpoint confirmation (form currently posts via formsubmit)

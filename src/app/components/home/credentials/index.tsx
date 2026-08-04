@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { credentials } from "@/data/page-data";
 
 const Credentials = () => {
@@ -45,40 +46,48 @@ const Credentials = () => {
           </div>
         </div>
 
-        <div>
-          <p className="text-sm uppercase tracking-widest text-white/50 mb-6 m-0">
-            Research &amp; program partners
-          </p>
-          <div className="flex flex-wrap items-center gap-8 md:gap-12">
-            <Image
-              src="/images/brooklyncollegeshoolofeducationlogo.png"
-              alt="Brooklyn College School of Education"
-              width={120}
-              height={64}
-              className="object-contain brightness-0 invert opacity-80"
-            />
-            <Image
-              src="/images/robinhoodfoundationlogo.png"
-              alt="Robin Hood Foundation"
-              width={120}
-              height={64}
-              className="object-contain brightness-0 invert opacity-80"
-            />
-            <Image
-              src="/images/researchfoundationcunylogo.png"
-              alt="Research Foundation CUNY"
-              width={120}
-              height={64}
-              className="object-contain brightness-0 invert opacity-80"
-            />
-            <Image
-              src="/images/nyf-logo-wp.webp"
-              alt="New York Foundling"
-              width={120}
-              height={64}
-              className="object-contain brightness-0 invert opacity-80"
-            />
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
+          <div>
+            <p className="text-sm uppercase tracking-widest text-white/50 mb-6 m-0">
+              Research &amp; program partners
+            </p>
+            <div className="flex flex-wrap items-center gap-8 md:gap-12">
+              <Image
+                src="/images/brooklyncollegeshoolofeducationlogo.png"
+                alt="Brooklyn College School of Education"
+                width={120}
+                height={64}
+                className="object-contain brightness-0 invert opacity-80"
+              />
+              <Image
+                src="/images/robinhoodfoundationlogo.png"
+                alt="Robin Hood Foundation"
+                width={120}
+                height={64}
+                className="object-contain brightness-0 invert opacity-80"
+              />
+              <Image
+                src="/images/researchfoundationcunylogo.png"
+                alt="Research Foundation CUNY"
+                width={120}
+                height={64}
+                className="object-contain brightness-0 invert opacity-80"
+              />
+              <Image
+                src="/images/nyf-logo-wp.webp"
+                alt="New York Foundling"
+                width={120}
+                height={64}
+                className="object-contain brightness-0 invert opacity-80"
+              />
+            </div>
           </div>
+          <Link
+            href="/resume"
+            className="inline-flex items-center text-white border-b border-white/40 pb-1 hover:border-white transition-colors"
+          >
+            View full academic resume →
+          </Link>
         </div>
       </div>
     </section>

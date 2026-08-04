@@ -11,13 +11,16 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-wrap gap-5 text-sm">
-          <Link href="#services" className="hover:text-white">
+          <Link href="/#services" className="hover:text-white">
             Services
           </Link>
-          <Link href="#credentials" className="hover:text-white">
+          <Link href="/#credentials" className="hover:text-white">
             Credentials
           </Link>
-          <Link href="#contact" className="hover:text-white">
+          <Link href="/resume" className="hover:text-white">
+            Academic Resume
+          </Link>
+          <Link href="/#contact" className="hover:text-white">
             Contact
           </Link>
           <Link href="mailto:dembek@brooklyn.edu" className="hover:text-white">
