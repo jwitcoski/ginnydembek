@@ -4,6 +4,7 @@ import Logo from "../logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { resumePath } from "@/lib/routes";
 
 const homeLinks = [
   { href: "/#who", label: "Who It's For" },
@@ -15,10 +16,10 @@ const homeLinks = [
 
 const resumeLinks = [
   { href: "/", label: "Home" },
-  { href: "/resume#about", label: "About" },
-  { href: "/resume#research", label: "Research" },
-  { href: "/resume#publications", label: "Publications" },
-  { href: "/resume#consulting", label: "Consulting" },
+  { href: `${resumePath}#about`, label: "About" },
+  { href: `${resumePath}#research`, label: "Research" },
+  { href: `${resumePath}#publications`, label: "Publications" },
+  { href: `${resumePath}#consulting`, label: "Consulting" },
   { href: "/#contact", label: "Contact" },
 ];
 

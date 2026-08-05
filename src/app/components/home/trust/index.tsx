@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { resumePath } from "@/lib/routes";
 
 const Trust = () => {
   return (
@@ -16,7 +17,7 @@ const Trust = () => {
             That faculty and research background informs both tutoring for families and consulting for schools, organizations, and nonprofits.
           </p>
           <Link
-            href="/resume"
+            href={resumePath}
             className="inline-flex items-center text-white border-b border-white/40 pb-1 hover:border-white"
           >
             View academic resume and publications

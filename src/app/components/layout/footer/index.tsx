@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { resumePath } from "@/lib/routes";
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
           <Link href="/#contact" className="hover:text-white">
             Contact
           </Link>
-          <Link href="/resume" className="hover:text-white">
+          <Link href={resumePath} className="hover:text-white">
             Academic Resume
           </Link>
           <Link href="mailto:ginny.dembek@gmail.com" className="hover:text-white">

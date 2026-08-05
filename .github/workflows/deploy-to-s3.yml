@@ -88,6 +88,76 @@ jobs:
         run: |
           aws s3 sync out/ s3://ginnydembek --delete
 
+      - name: Configure CloudFront rewrite for extensionless Next routes
+        run: |
+          set -euo pipefail
+          DIST_ID="E38F9PVDPMHRQK"
+          FUNCTION_NAME="ginnydembek-static-html-rewrite"
+
+          cat > /tmp/cf-function.js <<'EOF'
+          function handler(event) {
+            var request = event.request;
+            var uri = request.uri;
+            if (uri === "/") {
+              return request;
+            }
+            if (uri.indexOf(".") !== -1) {
+              return request;
+            }
+            if (uri.endsWith("/")) {
+              request.uri = uri.replace(/\/$/, "") + ".html";
+            } else {
+              request.uri = uri + ".html";
+            }
+            return request;
+          }
+          EOF
+
+          # Strip leading indentation from heredoc for valid JS
+          sed -i 's/^          //' /tmp/cf-function.js
+
+          EXISTING_ETAG=$(aws cloudfront describe-function --name "$FUNCTION_NAME" --query 'ETag' --output text 2>/dev/null || true)
+          if [ -z "${EXISTING_ETAG}" ] || [ "${EXISTING_ETAG}" = "None" ]; then
+            aws cloudfront create-function \
+              --name "$FUNCTION_NAME" \
+              --function-config '{"Comment":"Rewrite /resume to /resume.html for Next static export","Runtime":"cloudfront-js-2.0"}' \
+              --function-code "fileb:///tmp/cf-function.js"
+          else
+            aws cloudfront update-function \
+              --name "$FUNCTION_NAME" \
+              --if-match "$EXISTING_ETAG" \
+              --function-config '{"Comment":"Rewrite /resume to /resume.html for Next static export","Runtime":"cloudfront-js-2.0"}' \
+              --function-code "fileb:///tmp/cf-function.js"
+          fi
+
+          PUBLISH_ETAG=$(aws cloudfront describe-function --name "$FUNCTION_NAME" --query 'ETag' --output text)
+          aws cloudfront publish-function --name "$FUNCTION_NAME" --if-match "$PUBLISH_ETAG"
+
+          FN_ARN=$(aws cloudfront describe-function --name "$FUNCTION_NAME" --query 'FunctionSummary.FunctionMetadata.FunctionARN' --output text)
+          echo "Function ARN: $FN_ARN"
+
+          aws cloudfront get-distribution-config --id "$DIST_ID" > /tmp/dist.json
+          ETAG=$(jq -r '.ETag' /tmp/dist.json)
+          jq --arg arn "$FN_ARN" '
+            .DistributionConfig
+            | .DefaultCacheBehavior.FunctionAssociations = {
+                "Quantity": 1,
+                "Items": [
+                  {
+                    "FunctionARN": $arn,
+                    "EventType": "viewer-request"
+                  }
+                ]
+              }
+          ' /tmp/dist.json > /tmp/dist-config.json
+
+          aws cloudfront update-distribution \
+            --id "$DIST_ID" \
+            --if-match "$ETAG" \
+            --distribution-config file:///tmp/dist-config.json
+
+          echo "CloudFront viewer-request rewrite associated"
+
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation --distribution-id E38F9PVDPMHRQK --paths "/*"
