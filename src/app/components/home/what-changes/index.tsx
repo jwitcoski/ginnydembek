@@ -7,7 +7,7 @@ const WhatChanges = () => {
         <div className="max-w-2xl mb-12 md:mb-16">
           <h2 className="text-ink mb-4">What this work focuses on for your child</h2>
           <p>
-            The aim is practical progress in school-related skills, with instruction that is individualized and monitored over time.
+            The aim is practical progress in school-related skills, with instruction that is individualized and monitored over time. This work supports learning goals; it does not replace school special education services.
           </p>
         </div>
 
