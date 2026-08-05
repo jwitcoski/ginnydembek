@@ -7,7 +7,7 @@ const HowItWorks = () => {
         <div className="max-w-2xl mb-12 md:mb-16">
           <h2 className="text-ink mb-4">How it works</h2>
           <p>
-            Support is planned around your child, using methods drawn from special education research and classroom practice.
+            Support is planned around your child or program, using methods drawn from special education research and classroom practice. The goal is steady, measurable skill growth, not guaranteed grades or outcomes.
           </p>
         </div>
 

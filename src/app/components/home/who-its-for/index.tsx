@@ -7,7 +7,8 @@ const WhoItsFor = () => {
         <div className="max-w-2xl mb-12 md:mb-16">
           <h2 className="text-ink mb-4">Who this is for</h2>
           <p>
-            This practice is for families whose children need specialized support beyond general tutoring. Services focus on the areas below.
+            Dr. Dembek works with families and with schools and organizations.
+            Services are educational supports that complement, rather than replace, what schools provide.
           </p>
         </div>
 

@@ -23,14 +23,14 @@ const HeroSection = () => {
             Ginny Dembek Ph.D.
           </p>
           <h1 className="animate-fade-up-delay text-white mb-5 md:mb-6">
-            Literacy tutoring and education support for students with learning differences
+            Education consulting and literacy tutoring grounded in special education research
           </h1>
           <p className="animate-fade-up-delay-2 text-white/85 text-lg md:text-xl max-w-xl mb-8 md:mb-10">
-            Special education faculty at Brooklyn College. Consulting and tutoring based on assessment, evidence-based instruction, and progress monitoring.
+            Special education faculty at Brooklyn College. In-person tutoring for families in Brooklyn, and consulting for schools, organizations, and nonprofits.
           </p>
           <div className="animate-fade-up-delay-2 flex flex-wrap gap-3 md:gap-4">
             <Link href="/#contact" className="btn-primary">
-              Request a Consultation
+              Request a Free Consultation
             </Link>
             <Link href="/#who" className="btn-secondary">
               See who this is for

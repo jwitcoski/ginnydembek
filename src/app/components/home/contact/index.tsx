@@ -22,7 +22,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    fetch("https://formsubmit.co/ajax/dembek@brooklyn.edu", {
+    fetch("https://formsubmit.co/ajax/ginny.dembek@gmail.com", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({
@@ -61,7 +61,7 @@ const Contact = () => {
           <div>
             <h2 className="text-ink mb-4">Contact</h2>
             <p className="mb-8">
-              Share a brief description of your child and what kind of support you are seeking. Dr. Dembek will follow up to discuss next steps.
+              The first consultation is free. Share a brief description of your child, school, or organization and what kind of support you are seeking. Dr. Dembek will follow up to discuss next steps for in-person work in Brooklyn.
             </p>
             <div className="flex flex-col gap-3">
               {contactLinks.contactInfo.map((item) => (
@@ -132,7 +132,7 @@ const Contact = () => {
             </div>
             <div>
               <label htmlFor="childInfo" className="label">
-                Child&apos;s age / grade (optional)
+                Child&apos;s age / grade, or organization (optional)
               </label>
               <input
                 className="input"

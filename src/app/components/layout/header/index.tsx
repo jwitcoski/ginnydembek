@@ -44,7 +44,7 @@ const Header = () => {
               </Link>
             ))}
             <Link href="/#contact" className="btn-primary text-sm md:text-base px-5 py-2.5">
-              Request a Consultation
+              Free Consultation
             </Link>
           </div>
           <button
@@ -76,7 +76,7 @@ const Header = () => {
               onClick={() => setOpen(false)}
               className="btn-primary w-fit text-sm mt-2"
             >
-              Request a Consultation
+              Free Consultation
             </Link>
           </div>
         )}

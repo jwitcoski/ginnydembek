@@ -46,13 +46,13 @@ const ResumePage = () => {
       <section className="section-pad bg-softGray">
         <div className="container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
-            <h2 className="text-ink mb-2 text-3xl md:text-4xl">Looking for consulting services?</h2>
+            <h2 className="text-ink mb-2 text-3xl md:text-4xl">Looking for consulting or tutoring?</h2>
             <p className="m-0">
-              Visit the main site for literacy tutoring and education consulting for families.
+              Visit the main site for in-person literacy tutoring in Brooklyn and education consulting for families, schools, and organizations. The first consultation is free.
             </p>
           </div>
           <Link href="/#contact" className="btn-primary shrink-0">
-            Request a Consultation
+            Request a Free Consultation
           </Link>
         </div>
       </section>
