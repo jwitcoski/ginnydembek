@@ -6,21 +6,20 @@ const HeroSection = () => {
     <section className="relative overflow-hidden bg-ink">
       <div className="lg:grid lg:grid-cols-2 lg:min-h-[100svh]">
         {/* Photo: top on mobile, right column on desktop — never under copy */}
-        <div className="relative h-[46svh] min-h-[240px] max-h-[400px] overflow-hidden lg:h-auto lg:min-h-[100svh] lg:max-h-none lg:order-2">
+        <div className="relative h-[42svh] min-h-[220px] max-h-[340px] overflow-hidden lg:h-auto lg:min-h-[100svh] lg:max-h-none lg:order-2">
           <Image
             src="/images/headshot1.jpeg"
             alt="Ginny Dembek Ph.D."
             fill
             priority
-            className="object-cover object-[center_12%] lg:object-[center_18%] hero-image-motion"
+            className="object-cover object-[center_10%] lg:object-[center_18%] hero-image-motion"
             sizes="(min-width: 1024px) 50vw, 100vw"
           />
-          <div className="lg:hidden absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-ink to-transparent" />
         </div>
 
-        {/* Copy: below photo on mobile, left column on desktop */}
-        <div className="relative z-10 flex items-end lg:order-1">
-          <div className="container w-full pt-7 pb-12 lg:py-24 lg:pl-8 xl:pl-10">
+        {/* Copy sits in its own solid band — never layered on the photo */}
+        <div className="relative z-10 flex items-end bg-ink lg:bg-transparent lg:order-1">
+          <div className="container w-full pt-8 pb-12 lg:py-24 lg:pl-8 xl:pl-10">
             <div className="max-w-xl">
               <p className="animate-fade-up font-display text-2xl md:text-3xl lg:text-4xl text-white mb-3 md:mb-5">
                 Ginny Dembek Ph.D.
