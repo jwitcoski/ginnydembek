@@ -8,7 +8,7 @@ const Logistics = () => {
         <div className="max-w-2xl mb-12 md:mb-16">
           <h2 className="text-ink mb-4">Practical details</h2>
           <p>
-            Confirmed details for families and partners considering support. Fees and session structure are discussed during a free consultation.
+            Confirmed details for tutoring and consulting. Fees and session structure are discussed during a free consultation.
           </p>
         </div>
 

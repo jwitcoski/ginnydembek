@@ -14,7 +14,7 @@ const Trust = () => {
             She holds a Ph.D. in Special Education from Penn State University and has been on the Brooklyn College faculty since 2013, preparing teacher candidates in special education, inclusive education, and literacy instruction.
           </p>
           <p className="text-white/80 mb-8">
-            That faculty and research background informs both tutoring for families and consulting for schools, organizations, and nonprofits.
+            That faculty and research background informs tutoring for families and broader consulting for schools and organizations—including organizational structure and teacher or tutor training.
           </p>
           <Link
             href={resumePath}

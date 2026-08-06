@@ -7,9 +7,9 @@ import { useState } from "react";
 import { resumePath } from "@/lib/routes";
 
 const homeLinks = [
-  { href: "/#who", label: "Who It's For" },
+  { href: "/#tutoring", label: "Tutoring" },
+  { href: "/#consulting", label: "Consulting" },
   { href: "/#how", label: "How It Works" },
-  { href: "/#results", label: "Focus" },
   { href: "/#logistics", label: "Details" },
   { href: "/#contact", label: "Contact" },
 ];

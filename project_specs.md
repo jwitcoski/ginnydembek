@@ -14,8 +14,10 @@ Parent- and school-facing education consulting homepage (tutoring + organization
 
 ## Confirmed service details (from client intake)
 - **Email (private services):** ginny.dembek@gmail.com (do not use university email for private practice contact)
-- **Offerings:** Tutoring for students + consulting for organizations and schools
-- **Format:** In person in Brooklyn only; no virtual/online sessions
+- **Offerings:** Tutoring for students (separate from consulting) + broader consulting for organizations and schools (organizational structure, teacher/tutor training, literacy intervention)
+- **Tutoring format:** In-person sessions in Brooklyn, New York only; online tutoring is not offered
+- **Consulting format:** NYC and surrounding areas; virtual appointments available
+- **Tutoring focus:** Reading, writing, content area instruction, academic strategies, and executive functioning skills that transfer to classroom work
 - **Ages:** Elementary through high school, college transition, K–12 broadly
 - **First consultation:** Free
 - **Insurance / Medicaid:** Not accepted
@@ -51,6 +53,7 @@ Parent- and school-facing education consulting homepage (tutoring + organization
 - [x] Academic resume demoted to footer + about link (with stronger faculty blurb on home)
 - [x] Em dash / informal copy cleanup
 - [x] Apply client intake: email, logistics, audiences, boundaries, faculty trust
+- [x] Separate tutoring and consulting offerings (audiences, format/location, focus copy)
 
 ## Pending
 - [ ] Confirm contact form endpoint delivery for ginny.dembek@gmail.com in production (FormSubmit)
