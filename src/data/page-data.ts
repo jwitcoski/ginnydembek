@@ -22,38 +22,62 @@ export const contactBar = {
   ],
 };
 
-export const whoItsFor = [
-  {
-    title: "Families seeking literacy and learning support",
-    description:
-      "For parents of general education students, students at risk for a disability, and students with disabilities who need structured literacy instruction and academic strategies beyond general tutoring.",
+export const whoItsFor = {
+  tutoring: {
+    heading: "Tutoring for students and families",
+    intro:
+      "One-to-one educational support for students who need structured literacy instruction, content-area strategies, and executive skills beyond general homework help.",
+    items: [
+      {
+        title: "Families seeking literacy and learning support",
+        description:
+          "For parents of general education students, students at risk for a disability, and students with disabilities who need structured literacy instruction and academic strategies beyond general tutoring.",
+      },
+      {
+        title: "Reading, writing, and learning differences",
+        description:
+          "Educational support for students who struggle with reading, writing, or language-based learning needs, including schoolwork strategies and self-advocacy skills.",
+      },
+      {
+        title: "Organization and executive function",
+        description:
+          "Coaching in time management, organization, planning, task initiation, and self-monitoring across elementary, middle, and high school.",
+      },
+      {
+        title: "College transition",
+        description:
+          "Preparation for students moving toward college, including accommodations guidance and self-advocacy.",
+      },
+      {
+        title: "IEP and 504 meeting support",
+        description:
+          "Support for families preparing for or participating in IEP and 504 discussions, so educational plans align with what your child needs at school.",
+      },
+    ],
   },
-  {
-    title: "Reading, writing, and learning differences",
-    description:
-      "Educational support for students who struggle with reading, writing, or language-based learning needs, including schoolwork strategies and self-advocacy skills.",
+  consulting: {
+    heading: "Consulting for schools and organizations",
+    intro:
+      "Broader partnership work for public and private schools, programs, and nonprofits—including organizational structure, teacher and tutor training, and evidence-based literacy supports.",
+    items: [
+      {
+        title: "Organizational structure and program design",
+        description:
+          "Consulting on how literacy and intervention supports are organized across a school, program, or nonprofit, so systems align with student needs and available staffing.",
+      },
+      {
+        title: "Teacher and tutor training",
+        description:
+          "Professional development for educators and tutors on structured literacy, inclusive practice, and intervention approaches grounded in special education research.",
+      },
+      {
+        title: "Literacy intervention and inclusive practice",
+        description:
+          "Guidance on evidence-based literacy intervention and inclusive supports. Prior collaborative work includes literacy tutoring with New York Foundling.",
+      },
+    ],
   },
-  {
-    title: "Organization and executive function",
-    description:
-      "Coaching in time management, organization, planning, task initiation, and self-monitoring across elementary, middle, and high school.",
-  },
-  {
-    title: "College transition",
-    description:
-      "Preparation for students moving toward college, including accommodations guidance and self-advocacy.",
-  },
-  {
-    title: "IEP and 504 meeting support",
-    description:
-      "Support for families preparing for or participating in IEP and 504 discussions, so educational plans align with what your child needs at school.",
-  },
-  {
-    title: "Schools, organizations, and nonprofits",
-    description:
-      "Consulting for public and private schools, programs, and nonprofits on literacy intervention, inclusive practice, and evidence-based supports. Prior collaborative work includes literacy tutoring with New York Foundling.",
-  },
-];
+};
 
 export const howItWorks = [
   {
@@ -87,7 +111,7 @@ export const whatChanges = [
   {
     title: "Skills that transfer to school",
     description:
-      "The focus includes reading, writing, academic strategies, and the executive skills students need for classroom work.",
+      "Tutoring focus includes reading, writing, and content area instruction, along with academic strategies and the executive functioning skills students need for classroom work.",
   },
   {
     title: "A path toward independence",
@@ -98,14 +122,19 @@ export const whatChanges = [
 
 export const logisticsItems = [
   {
-    title: "Location and format",
+    title: "Tutoring: location and format",
     description:
-      "In-person sessions in Brooklyn, New York. Online sessions are not offered.",
+      "In-person sessions in Brooklyn, New York. Online sessions are not offered for tutoring.",
+  },
+  {
+    title: "Consulting: location and format",
+    description:
+      "Available in New York City and surrounding areas. Virtual appointments are available.",
   },
   {
     title: "Who is served",
     description:
-      "Elementary through high school and college transition (K–12 and beyond). Families, public and private schools, and nonprofit partners.",
+      "Tutoring for elementary through high school and college transition. Consulting for public and private schools, programs, and nonprofit partners.",
   },
   {
     title: "First consultation",
@@ -124,7 +153,7 @@ export const logisticsItems = [
   {
     title: "Next step",
     description:
-      "Send a short note about your child, school, or organization and what you are looking for. Dr. Dembek will follow up to discuss whether the services are a fit.",
+      "Send a short note about your child, school, or organization and whether you are looking for tutoring or consulting. Dr. Dembek will follow up to discuss whether the services are a fit.",
   },
 ];
 
@@ -176,7 +205,7 @@ export const contactLinks = {
     },
     {
       type: "location",
-      label: "Brooklyn, New York (in person)",
+      label: "Brooklyn tutoring · NYC-area consulting",
       link: "https://www.brooklyn.edu/faculty-staff/ginny-dembek/",
     },
   ],

@@ -28,7 +28,7 @@ const HeroSection = () => {
                 Education consulting and literacy tutoring grounded in special education research
               </h1>
               <p className="animate-fade-up-delay-2 text-white/85 text-base md:text-lg xl:text-xl mb-7 md:mb-10">
-                Special education faculty at Brooklyn College. In-person tutoring for families in Brooklyn, and consulting for schools, organizations, and nonprofits.
+                Special education faculty at Brooklyn College. In-person tutoring for families in Brooklyn, and broader consulting for schools and organizations across NYC and surrounding areas—including virtual appointments.
               </p>
               <div className="animate-fade-up-delay-2 flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
                 <Link href="/#contact" className="btn-primary justify-center sm:justify-start">

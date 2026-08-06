@@ -61,7 +61,7 @@ const Contact = () => {
           <div>
             <h2 className="text-ink mb-4">Contact</h2>
             <p className="mb-8">
-              The first consultation is free. Share a brief description of your child, school, or organization and what kind of support you are seeking. Dr. Dembek will follow up to discuss next steps for in-person work in Brooklyn.
+              The first consultation is free. Share a brief description of your child, school, or organization and whether you are seeking tutoring or consulting. Tutoring is in person in Brooklyn; consulting is available across NYC and surrounding areas, including virtual appointments.
             </p>
             <div className="flex flex-col gap-3">
               {contactLinks.contactInfo.map((item) => (

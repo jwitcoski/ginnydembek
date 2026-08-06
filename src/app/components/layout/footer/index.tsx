@@ -8,12 +8,15 @@ const Footer = () => {
         <div>
           <p className="font-display text-xl text-white mb-1">Ginny Dembek Ph.D.</p>
           <p className="text-sm text-white/60 m-0">
-            Education consulting and literacy tutoring for families, schools, and organizations
+            Literacy tutoring in Brooklyn and education consulting across NYC and surrounding areas
           </p>
         </div>
         <div className="flex flex-wrap gap-5 text-sm">
-          <Link href="/#who" className="hover:text-white">
-            Who It&apos;s For
+          <Link href="/#tutoring" className="hover:text-white">
+            Tutoring
+          </Link>
+          <Link href="/#consulting" className="hover:text-white">
+            Consulting
           </Link>
           <Link href="/#how" className="hover:text-white">
             How It Works

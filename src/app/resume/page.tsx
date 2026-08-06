@@ -48,7 +48,7 @@ const ResumePage = () => {
           <div>
             <h2 className="text-ink mb-2 text-3xl md:text-4xl">Looking for consulting or tutoring?</h2>
             <p className="m-0">
-              Visit the main site for in-person literacy tutoring in Brooklyn and education consulting for families, schools, and organizations. The first consultation is free.
+              Visit the main site for in-person literacy tutoring in Brooklyn and broader education consulting for schools and organizations across NYC and surrounding areas, including virtual appointments. The first consultation is free.
             </p>
           </div>
           <Link href="/#contact" className="btn-primary shrink-0">
