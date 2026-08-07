@@ -1,15 +1,24 @@
 # Project Specs: Ginny Dembek Ph.D. Consulting Site
 
 ## Goal
-Parent- and school-facing education consulting homepage (tutoring + organizational consulting), with the full academic resume on `/resume`. Stronger faculty/research presence on the home page as a trust signal.
+Parent-facing tutoring homepage, with broader school/organization consulting on a separate `/consulting` page, and the full academic resume on `/resume`. Stronger faculty/research presence on the home page as a trust signal.
 
 ## Homepage flow
 1. Hero
-2. Who it's for
+2. Who it's for (tutoring) + link to consulting page
 3. How it works
 4. What the work focuses on
-5. Practical details
-6. About / trust + link to resume
+5. Practical details (tutoring; link to consulting details)
+6. About / trust + links to resume and consulting
+7. Contact
+
+## Consulting page flow (`/consulting`)
+1. Hero
+2. Who consulting is for
+3. How consulting works
+4. Practical details
+5. About / trust + link to resume
+6. Cross-link to tutoring
 7. Contact
 
 ## Confirmed service details (from client intake)
@@ -54,6 +63,8 @@ Parent- and school-facing education consulting homepage (tutoring + organization
 - [x] Em dash / informal copy cleanup
 - [x] Apply client intake: email, logistics, audiences, boundaries, faculty trust
 - [x] Separate tutoring and consulting offerings (audiences, format/location, focus copy)
+- [x] Dedicated `/consulting` page for broader school/organization consulting
+- [x] Homepage hero title: "Educational consulting and tutoring grounded in research."
 
 ## Pending
 - [ ] Confirm contact form endpoint delivery for ginny.dembek@gmail.com in production (FormSubmit)

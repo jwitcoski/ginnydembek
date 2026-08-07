@@ -55,28 +55,6 @@ export const whoItsFor = {
       },
     ],
   },
-  consulting: {
-    heading: "Consulting for schools and organizations",
-    intro:
-      "Broader partnership work for public and private schools, programs, and nonprofits—including organizational structure, teacher and tutor training, and evidence-based literacy supports.",
-    items: [
-      {
-        title: "Organizational structure and program design",
-        description:
-          "Consulting on how literacy and intervention supports are organized across a school, program, or nonprofit, so systems align with student needs and available staffing.",
-      },
-      {
-        title: "Teacher and tutor training",
-        description:
-          "Professional development for educators and tutors on structured literacy, inclusive practice, and intervention approaches grounded in special education research.",
-      },
-      {
-        title: "Literacy intervention and inclusive practice",
-        description:
-          "Guidance on evidence-based literacy intervention and inclusive supports. Prior collaborative work includes literacy tutoring with New York Foundling.",
-      },
-    ],
-  },
 };
 
 export const howItWorks = [
@@ -88,7 +66,7 @@ export const howItWorks = [
   {
     title: "Evidence-based instruction",
     description:
-      "Instruction and consulting draw on research-supported methods from special education and literacy intervention.",
+      "Instruction draws on research-supported methods from special education and literacy intervention.",
   },
   {
     title: "Progress monitoring",
@@ -122,19 +100,14 @@ export const whatChanges = [
 
 export const logisticsItems = [
   {
-    title: "Tutoring: location and format",
+    title: "Location and format",
     description:
-      "In-person sessions in Brooklyn, New York. Online sessions are not offered for tutoring.",
-  },
-  {
-    title: "Consulting: location and format",
-    description:
-      "Available in New York City and surrounding areas. Virtual appointments are available.",
+      "In-person tutoring sessions in Brooklyn, New York. Online sessions are not offered for tutoring.",
   },
   {
     title: "Who is served",
     description:
-      "Tutoring for elementary through high school and college transition. Consulting for public and private schools, programs, and nonprofit partners.",
+      "Tutoring for elementary through high school and college transition. Families of general education students, students at risk for a disability, and students with disabilities.",
   },
   {
     title: "First consultation",
@@ -153,7 +126,7 @@ export const logisticsItems = [
   {
     title: "Next step",
     description:
-      "Send a short note about your child, school, or organization and whether you are looking for tutoring or consulting. Dr. Dembek will follow up to discuss whether the services are a fit.",
+      "Send a short note about your child and what kind of support you are looking for. Dr. Dembek will follow up to discuss whether tutoring is a fit. Schools and organizations can inquire about consulting on the consulting page.",
   },
 ];
 

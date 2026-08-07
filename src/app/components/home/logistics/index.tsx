@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { logisticsItems } from "@/data/page-data";
+import { consultingPath } from "@/lib/routes";
 
 const Logistics = () => {
   return (
@@ -8,7 +9,12 @@ const Logistics = () => {
         <div className="max-w-2xl mb-12 md:mb-16">
           <h2 className="text-ink mb-4">Practical details</h2>
           <p>
-            Confirmed details for tutoring and consulting. Fees and session structure are discussed during a free consultation.
+            Confirmed details for tutoring. Fees and session structure are discussed during a free consultation.
+            For school and organization consulting details, see the{" "}
+            <Link href={consultingPath} className="text-ink underline hover:text-primary">
+              consulting page
+            </Link>
+            .
           </p>
         </div>
 

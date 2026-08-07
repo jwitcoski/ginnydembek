@@ -4,22 +4,30 @@ import Logo from "../logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { resumePath } from "@/lib/routes";
+import { consultingPath, resumePath } from "@/lib/routes";
 
 const homeLinks = [
   { href: "/#tutoring", label: "Tutoring" },
-  { href: "/#consulting", label: "Consulting" },
+  { href: consultingPath, label: "Consulting" },
   { href: "/#how", label: "How It Works" },
   { href: "/#logistics", label: "Details" },
   { href: "/#contact", label: "Contact" },
 ];
 
+const consultingLinks = [
+  { href: "/", label: "Home" },
+  { href: `${consultingPath}#who`, label: "Who It's For" },
+  { href: `${consultingPath}#how`, label: "How It Works" },
+  { href: `${consultingPath}#logistics`, label: "Details" },
+  { href: `${consultingPath}#contact`, label: "Contact" },
+];
+
 const resumeLinks = [
   { href: "/", label: "Home" },
+  { href: consultingPath, label: "Consulting" },
   { href: `${resumePath}#about`, label: "About" },
   { href: `${resumePath}#research`, label: "Research" },
   { href: `${resumePath}#publications`, label: "Publications" },
-  { href: `${resumePath}#consulting`, label: "Consulting" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -27,7 +35,9 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const isResume = pathname?.startsWith("/resume");
-  const navLinks = isResume ? resumeLinks : homeLinks;
+  const isConsulting = pathname?.startsWith("/consulting");
+  const navLinks = isResume ? resumeLinks : isConsulting ? consultingLinks : homeLinks;
+  const contactHref = isConsulting ? `${consultingPath}#contact` : "/#contact";
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-ink/90 backdrop-blur-md border-b border-white/10">
@@ -44,7 +54,7 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Link href="/#contact" className="btn-primary text-sm md:text-base px-5 py-2.5">
+            <Link href={contactHref} className="btn-primary text-sm md:text-base px-5 py-2.5">
               Free Consultation
             </Link>
           </div>
@@ -73,7 +83,7 @@ const Header = () => {
               </Link>
             ))}
             <Link
-              href="/#contact"
+              href={contactHref}
               onClick={() => setOpen(false)}
               className="btn-primary w-fit text-sm mt-2"
             >

@@ -1,58 +1,50 @@
+import Link from "next/link";
 import { whoItsFor } from "@/data/page-data";
-
-const AudienceGroup = ({
-  id,
-  heading,
-  intro,
-  items,
-}: {
-  id: string;
-  heading: string;
-  intro: string;
-  items: { title: string; description: string }[];
-}) => (
-  <div id={id}>
-    <div className="max-w-2xl mb-8 md:mb-10">
-      <h3 className="text-ink mb-3 text-2xl md:text-3xl">{heading}</h3>
-      <p className="m-0">{intro}</p>
-    </div>
-    <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
-      {items.map((item) => (
-        <div key={item.title} className="border-t border-mistGray pt-6">
-          <h4 className="text-ink mb-3 text-lg md:text-xl font-semibold">{item.title}</h4>
-          <p className="m-0">{item.description}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+import { consultingPath } from "@/lib/routes";
 
 const WhoItsFor = () => {
+  const { heading, intro, items } = whoItsFor.tutoring;
+
   return (
     <section id="who" className="section-pad bg-canvas">
       <div className="container">
         <div className="max-w-2xl mb-12 md:mb-16">
           <h2 className="text-ink mb-4">Who this is for</h2>
           <p>
-            Tutoring and consulting are offered as separate services. Tutoring is individualized work with students and families.
-            Consulting is broader partnership work with schools and organizations—including organizational structure and teacher or tutor training.
-            Both are educational supports that complement, rather than replace, what schools provide.
+            Tutoring is individualized educational support for students and families. It complements, rather than replaces, what schools provide.
+            Schools and organizations seeking broader partnership work can{" "}
+            <Link href={consultingPath} className="text-ink underline hover:text-primary">
+              learn about consulting separately
+            </Link>
+            .
           </p>
         </div>
 
-        <div className="flex flex-col gap-16 md:gap-20">
-          <AudienceGroup
-            id="tutoring"
-            heading={whoItsFor.tutoring.heading}
-            intro={whoItsFor.tutoring.intro}
-            items={whoItsFor.tutoring.items}
-          />
-          <AudienceGroup
-            id="consulting"
-            heading={whoItsFor.consulting.heading}
-            intro={whoItsFor.consulting.intro}
-            items={whoItsFor.consulting.items}
-          />
+        <div id="tutoring">
+          <div className="max-w-2xl mb-8 md:mb-10">
+            <h3 className="text-ink mb-3 text-2xl md:text-3xl">{heading}</h3>
+            <p className="m-0">{intro}</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
+            {items.map((item) => (
+              <div key={item.title} className="border-t border-mistGray pt-6">
+                <h4 className="text-ink mb-3 text-lg md:text-xl font-semibold">{item.title}</h4>
+                <p className="m-0">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16 md:mt-20 border-t border-mistGray pt-10 md:pt-12 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div className="max-w-xl">
+            <h3 className="text-ink mb-2 text-xl md:text-2xl">Consulting for schools and organizations</h3>
+            <p className="m-0">
+              Organizational structure, teacher and tutor training, and literacy intervention guidance—available across NYC and surrounding areas, including virtual appointments.
+            </p>
+          </div>
+          <Link href={consultingPath} className="btn-primary shrink-0">
+            Read about consulting
+          </Link>
         </div>
       </div>
     </section>

@@ -17,9 +17,9 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Ginny Dembek Ph.D. | Education Consulting & Literacy Tutoring",
+  title: "Ginny Dembek Ph.D. | Educational Consulting & Tutoring",
   description:
-    "Ginny Dembek Ph.D., special education faculty at Brooklyn College. In-person literacy tutoring in Brooklyn, and education consulting for schools and organizations in NYC and surrounding areas, including virtual appointments.",
+    "Ginny Dembek Ph.D., special education faculty at Brooklyn College. In-person literacy tutoring in Brooklyn, and educational consulting for schools and organizations in NYC and surrounding areas, including virtual appointments.",
 };
 
 export default function RootLayout({

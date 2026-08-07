@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { resumePath } from "@/lib/routes";
+import { consultingPath, resumePath } from "@/lib/routes";
 
 const Trust = () => {
   return (
@@ -16,12 +16,20 @@ const Trust = () => {
           <p className="text-white/80 mb-8">
             That faculty and research background informs tutoring for families and broader consulting for schools and organizations—including organizational structure and teacher or tutor training.
           </p>
-          <Link
-            href={resumePath}
-            className="inline-flex items-center text-white border-b border-white/40 pb-1 hover:border-white"
-          >
-            View academic resume and publications
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+            <Link
+              href={resumePath}
+              className="inline-flex items-center text-white border-b border-white/40 pb-1 hover:border-white"
+            >
+              View academic resume and publications
+            </Link>
+            <Link
+              href={consultingPath}
+              className="inline-flex items-center text-white border-b border-white/40 pb-1 hover:border-white"
+            >
+              Read about consulting
+            </Link>
+          </div>
         </div>
       </div>
     </section>

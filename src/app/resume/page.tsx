@@ -6,6 +6,7 @@ import Experience from "../components/resume/experience";
 import EducationSkills from "../components/resume/education-skills";
 import Publications from "../components/resume/publications";
 import Link from "next/link";
+import { consultingPath } from "@/lib/routes";
 
 export const metadata: Metadata = {
   title: "Academic Resume | Ginny Dembek Ph.D.",
@@ -44,16 +45,29 @@ const ResumePage = () => {
       </div>
       <Publications />
       <section className="section-pad bg-softGray">
-        <div className="container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          <div>
-            <h2 className="text-ink mb-2 text-3xl md:text-4xl">Looking for consulting or tutoring?</h2>
-            <p className="m-0">
-              Visit the main site for in-person literacy tutoring in Brooklyn and broader education consulting for schools and organizations across NYC and surrounding areas, including virtual appointments. The first consultation is free.
-            </p>
+        <div className="container flex flex-col gap-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div>
+              <h2 className="text-ink mb-2 text-3xl md:text-4xl">Looking for tutoring?</h2>
+              <p className="m-0">
+                In-person literacy tutoring and academic support for students and families in Brooklyn. The first consultation is free.
+              </p>
+            </div>
+            <Link href="/#contact" className="btn-primary shrink-0">
+              Request a Free Consultation
+            </Link>
           </div>
-          <Link href="/#contact" className="btn-primary shrink-0">
-            Request a Free Consultation
-          </Link>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-mistGray pt-8">
+            <div>
+              <h2 className="text-ink mb-2 text-3xl md:text-4xl">Looking for consulting?</h2>
+              <p className="m-0">
+                Broader educational consulting for schools and organizations across NYC and surrounding areas, including virtual appointments.
+              </p>
+            </div>
+            <Link href={consultingPath} className="btn-primary shrink-0">
+              Read about consulting
+            </Link>
+          </div>
         </div>
       </section>
     </main>

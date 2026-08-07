@@ -5,3 +5,6 @@
  */
 export const resumePath =
   process.env.NODE_ENV === "production" ? "/resume.html" : "/resume";
+
+export const consultingPath =
+  process.env.NODE_ENV === "production" ? "/consulting.html" : "/consulting";
