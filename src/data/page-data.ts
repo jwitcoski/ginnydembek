@@ -126,7 +126,7 @@ export const logisticsItems = [
   {
     title: "Next step",
     description:
-      "Send a short note about your child and what kind of support you are looking for. Dr. Dembek will follow up to discuss whether tutoring is a fit. Schools and organizations can inquire about consulting on the consulting page.",
+      "Send a short note about your child and the support you are looking for. I will follow up to discuss whether tutoring is a fit. Schools and organizations can ask about consulting on the consulting page.",
   },
 ];
 

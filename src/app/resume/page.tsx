@@ -54,7 +54,7 @@ const ResumePage = () => {
               </p>
             </div>
             <Link href="/#contact" className="btn-primary shrink-0">
-              Request a Free Consultation
+              Schedule a conversation
             </Link>
           </div>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-mistGray pt-8">

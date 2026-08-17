@@ -227,6 +227,8 @@ Do not invent these. Leave placeholders or omit until she supplies them.
 
 ---
 
-## Implementation note
+## Implementation status
 
-No webpage files were edited in this pass. After approval, apply only accepted rows, keep verification-flagged rows on hold, and leave SEO metadata unchanged unless separately requested.
+**Applied (approved highest-impact set):** homepage hero + subheadline; about/trust first person and headings; consulting hero subtitle and how-it-works titles/intros; primary CTAs; resume consulting/tutoring blurbs that used “comprehensive” or clinical-leaning service lists.
+
+**Still awaiting verification / approval:** remaining table rows in this document, including faculty rank, assessment language, consulting insurance card, resume hero epithet, research outcome phrasing, stat strip, and News TBD.

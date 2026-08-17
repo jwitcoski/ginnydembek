@@ -25,17 +25,17 @@ const HeroSection = () => {
                 Ginny Dembek Ph.D.
               </p>
               <h1 className="animate-fade-up-delay text-white text-[1.75rem] leading-[1.15] sm:text-4xl md:text-5xl xl:text-[3.25rem] xl:leading-[1.12] mb-4 md:mb-6">
-                Educational consulting and tutoring grounded in research.
+                Literacy tutoring for students in Brooklyn, and consulting for schools that need clearer literacy systems.
               </h1>
               <p className="animate-fade-up-delay-2 text-white/85 text-base md:text-lg xl:text-xl mb-7 md:mb-10">
-                Special education faculty at Brooklyn College. In-person tutoring for families in Brooklyn, and broader consulting for schools and organizations across NYC and surrounding areas—including virtual appointments.
+                I teach special education at Brooklyn College. I work one-to-one with students and families in Brooklyn, and I consult with schools and organizations in New York City and nearby areas. Virtual consulting appointments are available.
               </p>
               <div className="animate-fade-up-delay-2 flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
                 <Link href="/#contact" className="btn-primary justify-center sm:justify-start">
-                  Request a Free Consultation
+                  Schedule a conversation
                 </Link>
                 <Link href="/#who" className="btn-secondary justify-center sm:justify-start">
-                  See who this is for
+                  See who I work with
                 </Link>
               </div>
             </div>

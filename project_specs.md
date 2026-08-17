@@ -70,7 +70,8 @@ Parent-facing tutoring homepage, with broader school/organization consulting on 
 - [ ] Confirm contact form endpoint delivery for ginny.dembek@gmail.com in production (FormSubmit)
 - [ ] Add testimonials only when client-approved quotes exist
 - [ ] Add verified Academia.edu profile URL when confirmed
-- [ ] Review and approve `docs/consulting-copy-audit.md`, then apply accepted copy revisions (webpage files not edited yet)
+- [ ] Review remaining items in `docs/consulting-copy-audit.md` (verification questions and lower-priority rows)
 
 ## Completed (recent)
 - [x] Public-facing English copy audit via `ai-check` + `humanize` → `docs/consulting-copy-audit.md`
+- [x] Apply five highest-impact copy revisions (hero, about/trust, consulting how-it-works, CTAs, resume consulting/tutoring blurbs)

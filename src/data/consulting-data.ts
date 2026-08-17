@@ -1,13 +1,13 @@
 export const consultingHero = {
   title: "Educational consulting for schools and organizations",
   subtitle:
-    "Broader partnership work grounded in special education research—organizational structure, teacher and tutor training, and evidence-based literacy supports for public and private schools, programs, and nonprofits.",
+    "Consulting for public and private schools, programs, and nonprofits on organizational structure, teacher and tutor training, and literacy intervention. The work draws on special education research and is adapted to your setting.",
 };
 
 export const consultingAudiences = {
   heading: "Who consulting is for",
   intro:
-    "Consulting is separate from one-to-one tutoring. It is partnership work with schools and organizations that want systems and training aligned with student needs.",
+    "Consulting is separate from one-to-one tutoring. It is work with schools and organizations that want systems and training aligned with student needs.",
   items: [
     {
       title: "Organizational structure and program design",
@@ -36,17 +36,17 @@ export const consultingHowItWorks = [
   {
     title: "Research-informed recommendations",
     description:
-      "Guidance draws on special education and literacy intervention research, adapted to your setting rather than a one-size approach.",
+      "Guidance draws on special education and literacy intervention research, then adapts to your staffing, students, and current supports.",
   },
   {
-    title: "Training that sticks",
+    title: "Training meant for classroom use",
     description:
-      "Professional development for teachers and tutors is designed for classroom use—structured literacy, inclusive practice, and intervention methods that transfer to daily work.",
+      "Professional development for teachers and tutors focuses on structured literacy, inclusive practice, and intervention methods they can use in daily work.",
   },
   {
-    title: "Systems that support students",
+    title: "Organizing supports across a program",
     description:
-      "Consulting can address how supports are organized across a program so students receive consistent, evidence-aligned instruction.",
+      "Consulting can address how literacy and intervention supports are organized so students receive consistent instruction.",
   },
 ];
 
