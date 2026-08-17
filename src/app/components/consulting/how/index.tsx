@@ -7,7 +7,7 @@ const ConsultingHow = () => {
         <div className="max-w-2xl mb-12 md:mb-16">
           <h2 className="text-ink mb-4">How consulting works</h2>
           <p>
-            Partnerships are planned around your setting and goals, using methods drawn from special education research and classroom practice. The aim is stronger systems and training—not guaranteed student outcomes.
+            Consulting is planned around your setting and goals, using methods from special education research and classroom practice. The focus is clearer systems and usable training. I do not guarantee student outcomes.
           </p>
         </div>
 

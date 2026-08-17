@@ -17,10 +17,10 @@ const ConsultingHero = () => {
           </p>
           <div className="animate-fade-up-delay-2 flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
             <Link href="#contact" className="btn-primary justify-center sm:justify-start">
-              Request a Free Consultation
+              Schedule a conversation
             </Link>
             <Link href="#who" className="btn-secondary justify-center sm:justify-start">
-              See who this is for
+              See who consulting is for
             </Link>
           </div>
         </div>

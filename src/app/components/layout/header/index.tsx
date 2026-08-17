@@ -16,7 +16,7 @@ const homeLinks = [
 
 const consultingLinks = [
   { href: "/", label: "Home" },
-  { href: `${consultingPath}#who`, label: "Who It's For" },
+  { href: `${consultingPath}#who`, label: "Who I Work With" },
   { href: `${consultingPath}#how`, label: "How It Works" },
   { href: `${consultingPath}#logistics`, label: "Details" },
   { href: `${consultingPath}#contact`, label: "Contact" },
@@ -55,7 +55,7 @@ const Header = () => {
               </Link>
             ))}
             <Link href={contactHref} className="btn-primary text-sm md:text-base px-5 py-2.5">
-              Free Consultation
+              Schedule a conversation
             </Link>
           </div>
           <button
@@ -87,7 +87,7 @@ const Header = () => {
               onClick={() => setOpen(false)}
               className="btn-primary w-fit text-sm mt-2"
             >
-              Free Consultation
+              Schedule a conversation
             </Link>
           </div>
         )}

@@ -193,10 +193,10 @@ const ConsultingContent = () => (
     <div>
       <h4 className="font-bold mb-3">Areas of Expertise</h4>
       <div className="grid md:grid-cols-2 gap-4">
-        <div><strong>Educational Program Evaluation</strong>: Comprehensive evaluation services for special education interventions.</div>
-        <div><strong>Inclusive Education Implementation</strong>: Developing inclusive education models and co-teaching support.</div>
-        <div><strong>Curriculum Development and Modification</strong>: Accessibility reviews and UDL integration.</div>
-        <div><strong>Professional Development Design</strong>: Customized workshops and multi-year learning initiatives.</div>
+        <div><strong>Educational program evaluation</strong>: Evaluation support for special education interventions, when that is part of an agreed consulting scope.</div>
+        <div><strong>Inclusive education implementation</strong>: Developing inclusive education models and co-teaching support.</div>
+        <div><strong>Curriculum development and modification</strong>: Accessibility reviews and UDL integration.</div>
+        <div><strong>Professional development design</strong>: Workshops and learning series on literacy intervention and inclusive practice, scoped with each partner.</div>
       </div>
     </div>
     <div>
@@ -213,22 +213,22 @@ const ConsultingContent = () => (
 const TutoringContent = () => (
   <div className="space-y-6 text-base">
     <div>
-      <h4 className="font-bold mb-3">Specialized Services</h4>
+      <h4 className="font-bold mb-3">Tutoring services</h4>
       <div className="grid md:grid-cols-2 gap-4">
-        <div><strong>Specialized Literacy Tutoring</strong>: Dyslexia, dysgraphia, language-based learning disabilities; evidence-based structured literacy.</div>
-        <div><strong>Academic Support for Learning Disabilities</strong>: Explicit instruction, compensatory strategies, study techniques, self-advocacy.</div>
-        <div><strong>Executive Function Coaching</strong>: Time management, organization, planning, task initiation, self-monitoring.</div>
-        <div><strong>College Preparation for Students with Disabilities</strong>: Self-advocacy training, accommodations guidance, college applications.</div>
+        <div><strong>Literacy tutoring</strong>: Support for students with reading, writing, or language-based learning needs, using structured literacy methods.</div>
+        <div><strong>Academic support for learning differences</strong>: Explicit instruction, compensatory strategies, study techniques, and self-advocacy.</div>
+        <div><strong>Executive function coaching</strong>: Time management, organization, planning, task initiation, and self-monitoring.</div>
+        <div><strong>College transition support</strong>: Self-advocacy training, accommodations guidance, and college application support for students with disabilities.</div>
       </div>
     </div>
     <div>
-      <h4 className="font-bold mb-3">Tutoring Approach</h4>
+      <h4 className="font-bold mb-3">Tutoring approach</h4>
       <ul className="list-disc pl-6 space-y-2">
-        <li><strong>Assessment-Based Planning</strong>: Comprehensive assessment informing individualized goals</li>
-        <li><strong>Evidence-Based Methods</strong>: Research-supported instructional approaches</li>
-        <li><strong>Progress Monitoring</strong>: Regular data collection aligned with learning goals</li>
-        <li><strong>Collaboration with Schools and Families</strong>: Consistency across learning environments</li>
-        <li><strong>Focus on Independence</strong>: Metacognitive strategies and gradual release of responsibility</li>
+        <li><strong>Planning from current information</strong>: Review of schoolwork and available records to set individualized goals</li>
+        <li><strong>Research-supported methods</strong>: Instructional approaches drawn from special education and literacy research</li>
+        <li><strong>Progress monitoring</strong>: Regular data collection aligned with learning goals</li>
+        <li><strong>Collaboration with schools and families</strong>: Consistency across learning environments</li>
+        <li><strong>Focus on independence</strong>: Strategies students can apply themselves, with support fading as skills strengthen</li>
       </ul>
     </div>
   </div>

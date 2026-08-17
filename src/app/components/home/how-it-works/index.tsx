@@ -7,7 +7,7 @@ const HowItWorks = () => {
         <div className="max-w-2xl mb-12 md:mb-16">
           <h2 className="text-ink mb-4">How it works</h2>
           <p>
-            Tutoring is planned around your child, using methods drawn from special education research and classroom practice. The goal is steady, measurable skill growth, not guaranteed grades or outcomes.
+            Tutoring is planned around your child, using methods from special education research and classroom practice. We set clear skill goals and track progress. I do not promise grades or outcomes.
           </p>
         </div>
 

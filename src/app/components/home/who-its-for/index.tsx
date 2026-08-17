@@ -9,10 +9,10 @@ const WhoItsFor = () => {
     <section id="who" className="section-pad bg-canvas">
       <div className="container">
         <div className="max-w-2xl mb-12 md:mb-16">
-          <h2 className="text-ink mb-4">Who this is for</h2>
+          <h2 className="text-ink mb-4">Who I work with</h2>
           <p>
-            Tutoring is individualized educational support for students and families. It complements, rather than replaces, what schools provide.
-            Schools and organizations seeking broader partnership work can{" "}
+            Tutoring is individualized educational support for students and families. It complements school services; it does not replace them.
+            Schools and organizations looking for training or program support can{" "}
             <Link href={consultingPath} className="text-ink underline hover:text-primary">
               learn about consulting separately
             </Link>
@@ -39,7 +39,7 @@ const WhoItsFor = () => {
           <div className="max-w-xl">
             <h3 className="text-ink mb-2 text-xl md:text-2xl">Consulting for schools and organizations</h3>
             <p className="m-0">
-              Organizational structure, teacher and tutor training, and literacy intervention guidance—available across NYC and surrounding areas, including virtual appointments.
+              Organizational structure, teacher and tutor training, and literacy intervention guidance. Available across NYC and nearby areas, including virtual appointments.
             </p>
           </div>
           <Link href={consultingPath} className="btn-primary shrink-0">
